@@ -4,6 +4,8 @@ class VentaController {
     #valor;
     #listaVentas;
     #ventasView;
+    #mensaje;
+    #mensajeView;
 
     constructor() {
         let $ = document.querySelector.bind(document);
@@ -14,6 +16,10 @@ class VentaController {
         this.#ventasView = new VentasView($('#VentasView'));
 
         this.#ventasView.update(this.#listaVentas);
+
+        this.#mensaje = new Mensaje();
+        this.#mensajeView = new MensajeView($('#MensajeView'));
+        this.#mensajeView.update(this.#mensaje);
     }
 
     agrega(event) {
@@ -23,6 +29,9 @@ class VentaController {
                             
         this.#listaVentas.agrega(this.#creaVenta());
         this.#ventasView.update(this.#listaVentas);
+
+        this.#mensaje.texto = 'Operación realizada correctamente!!!';
+        this.#mensajeView.update(this.#mensaje);
         this.#limpiaFormulario();
 
 

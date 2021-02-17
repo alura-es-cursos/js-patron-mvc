@@ -10,6 +10,10 @@
 <body class="container">
     
     <h1 class="text-center">Ventas</h1>
+
+    <div id="MensajeView">
+        
+    </div>
     
     <form class="form" onsubmit="ventaController.agrega(event);">
         
@@ -48,9 +52,12 @@
     
     <script src="js/app/helpers/FechaHelper.js"></script>
     <script src="js/app/models/Venta.js"></script>
+    <script src="js/app/views/View.js"></script>
     <script src="js/app/controllers/VentaController.js"></script>
     <script src="js/app/models/ListaVentas.js"></script>
     <script src="js/app/views/VentasView.js"></script>
+    <script src="js/app/models/Mensaje.js"></script>
+    <script src="js/app/views/MensajeView.js"></script>
 
     <script>
         let ventaController = new VentaController();

@@ -1,8 +1,7 @@
-class VentasView {
-    #render;
+class VentasView extends View {
 
-    constructor(render) {
-        this.#render = render;
+    constructor(elemento) {
+        super(elemento);
     }
 
     template(model) {
@@ -43,7 +42,5 @@ class VentasView {
         `;
     }
 
-    update(model) {
-        this.#render.innerHTML = this.template(model);
-    }
+
 }
