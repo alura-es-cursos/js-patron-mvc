@@ -3,6 +3,7 @@ class VentaController {
     #cantidad;
     #valor;
     #listaVentas;
+    #ventasView;
 
     constructor() {
         let $ = document.querySelector.bind(document);
@@ -10,6 +11,9 @@ class VentaController {
         this.#cantidad = $('#cantidad');
         this.#valor = $('#valor');
         this.#listaVentas = new ListaVentas();
+        this.#ventasView = new VentasView($('#VentasView'));
+
+        this.#ventasView.update(this.#listaVentas);
     }
 
     agrega(event) {
@@ -18,10 +22,9 @@ class VentaController {
         
                             
         this.#listaVentas.agrega(this.#creaVenta());
-        //this.#listaVentas.listaVentas.push(this.#creaVenta());
+        this.#ventasView.update(this.#listaVentas);
         this.#limpiaFormulario();
-        this.#listaVentas.listaVentas.length = 0;
-        console.log(this.#listaVentas.listaVentas);
+
 
     }
 
