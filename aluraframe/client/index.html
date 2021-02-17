@@ -11,7 +11,7 @@
     
     <h1 class="text-center">Ventas</h1>
     
-    <form class="form" onsubmit="ventaController.agrega(event);">
+    <form class="form">
         
         <div class="form-group">
             <label for="fecha">Fecha</label>
@@ -41,19 +41,23 @@
     </div> 
     <br>
     <br>
-
-    <div id="VentasView">
-        
-    </div>
     
-    <script src="js/app/helpers/FechaHelper.js"></script>
-    <script src="js/app/models/Venta.js"></script>
-    <script src="js/app/controllers/VentaController.js"></script>
-    <script src="js/app/models/ListaVentas.js"></script>
-    <script src="js/app/views/VentasView.js"></script>
-
-    <script>
-        let ventaController = new VentaController();
-    </script>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Cantidad</th>
+                <th>Valor</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+        </tbody>
+        
+        <tfoot>
+        </tfoot>
+    </table>
+    <script src="js/lib/index.js"></script>
 </body>
 </html>
